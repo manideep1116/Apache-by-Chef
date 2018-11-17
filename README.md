@@ -2,7 +2,7 @@
 
 Configured Apache Web Server on a node server to display three different websites on three different ports using configuration management tool(Chef).
 
-##Prerequisites
+## Prerequisites
 
 Here we require three servers:
 1. Chef-Server
@@ -14,7 +14,7 @@ We can use AWS ec2-instances or any virtual machines for the servers or for chef
 We are using AWS ec2-linux(Ubuntu 14.04) instances for worksation and node server. And a hosted version of chef-server. 
 
 Please read [Chef Docs](https://docs.chef.io/). for setting up workstation, chef-server, chef-client on node and other concepts.
-##Getting started
+## Getting started
 
 We follow the following steps:
 1. Create a new cookbook in chef_repo/cookbooks
@@ -166,7 +166,7 @@ $ Knife cookbook upload apache
 ```
 6. run the chef-client command on node sever. Open a web browser check the webstes running on different ports.
 
-##License
+## License
 This project is under MIT license.
 
 
