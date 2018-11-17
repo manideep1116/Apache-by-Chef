@@ -44,8 +44,8 @@ end
 ```
 
 - Disable virtual host:
-  We need to diable vistual host, which is nothing but a default home page displayed by Apache. To disable, we simply rename the file name.
-We use "execute" resource here. Execute resource performs whatever users passes.Here, execute is not idempotent i.e it does not work multiple times.So, we use guards like only_if or not_if to prevent from errors.
+  We need to disable vistual host, which is nothing but a default home page displayed by Apache. To disable, we simply rename the file name to default.conf.disabled.
+We use "execute" resource here. Execute resource performs whatever users pass.Here, execute is not idempotent i.e it does not work multiple times. So, we use guards like only_if or not_if to prevent from errors.
 
 ```
 execute "mv /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf.disabled"  do
@@ -59,7 +59,7 @@ Resource executes only if "only_if" condition is true or else it will go to next
 Notifies reminds to restart the apache2 after every resource.
 
 - Now we iterate through multiple steps for every site written in attribute.
-Attributes: Attrubutes supplies the details for recipes like site names and port numbers.
+Attributes: Attributes supplies the details for recipes like site names and port numbers.
 ```
 node['apache']['sites'].each do |site_name, site_data|
 document_root = "/srv/apache/#{site_name}"
@@ -67,7 +67,8 @@ document_root = "/srv/apache/#{site_name}"
 For every iterarion site_name and site_data divide like key-value pairs in hash and gets data from attributes and apply the following resources written inside the loop for each site.
 
 Now we will write the resources inside the loop. 
-  -We need to setup a configuation file for the virtual host.
+ 
+ - We need to setup a configuation file for the virtual host.
 ```
  template "/etc/apache2/sites-enabled/#{site_name}.conf" do
     source "custom.erb"
@@ -85,7 +86,7 @@ Here, we are giving the location to store new configuration file.
 
 The custom.erb file is reviewed to follow the template and the data is taken from variables. Based on that the configuration files are generated for different websites.
 
-  -Now we nee to create a root directory for virtual host.
+  - Now we nee to create a root directory for virtual host.
 ```
  directory document_root do
     mode "0755"
@@ -94,7 +95,7 @@ end
 ```
 Here, document_root ="srv/apache/#{site-name}" is passed. Recursive is true because, it creates "srv" if not present, creates apache if not present in srv and similarly #{site_name} inside it.
 
-  -We need to setup a template for home page which can be edited wherever needed.
+  - We need to setup a template for home page which can be edited wherever needed.
 ```
 template "#{document_root}/index.html" do
     source "index.html.erb"
@@ -111,16 +112,16 @@ Please review templates and attributes directory in cookbooks/apache fot the sou
 
 Till here the interation is completed.
 
--Lastly, we give the service resource to enable and start the apache2 server after every resource above is executed.
+- Lastly, we write the service resource to enable and start the apache2 server after every resource above is executed.
 
 ```
 service "apache2" do
   action [ :enable, :start ]
 end
 ```
-4. We can also write attributes in recipes, roles, environments. Attributes are choosen based on precedence priority. Before we have written two attributes for two websites in attributes directory. Now, we another attribite in a role and will assign that role to runlist of the node.
+4. We can also write attributes in recipes, roles, environments. Attributes are choosen based on precedence priority. Before, we have written two attributes for two websites in attributes directory. Now, we write another aittribite in a role and will assign that role to runlist of the node.
 
-Roles: Roles are just a layer above the run lists. Roles make easy to install similar applications on thousands of servers.
+Roles: Roles are just a layer above the run lists. Roles make easier to install similar applications on thousands of servers.
 
 ```
 {
@@ -143,7 +144,7 @@ Roles: Roles are just a layer above the run lists. Roles make easy to install si
 ```
 Here, in the above role we have written an attribute admin with the the port details and runlists with the recipes needed to be executed on the node.
 
-Base Roles: If suppose we have a bunch of softwares that need to be installed in all the nodes, we define required recipes and assign this base role to the runlist of any new nodes that join.
+Base Roles: If suppose, we have a bunch of softwares that need to be installed in all the nodes, we define required recipes and assign this base role to the runlist of any new nodes that join.
 
 ```
 {
@@ -158,7 +159,7 @@ Base Roles: If suppose we have a bunch of softwares that need to be installed in
 ```
 We have assigned network protocol and other recipes in the base role.
 
-5. Now upload the cookbook to the chef-server and assign the base role in the runlist of node.
+5. Now upload the cookbook to the chef-server and assign the role and base role in the runlist of node.
 
 ```
 $ Knife cookbook upload apache
@@ -166,6 +167,10 @@ $ Knife cookbook upload apache
 ```
 6. run the chef-client command on node sever. Open a web browser check the webstes running on different ports.
 
+```
+$ chef-client
+
+```
 ## License
 This project is under MIT license.
 
