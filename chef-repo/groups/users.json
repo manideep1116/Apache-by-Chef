@@ -1,0 +1,9 @@
+{
+  "name": "users",
+  "users": [
+    "pivotal"
+  ],
+  "groups": [
+    "00000000000079400ca2ece323d2a7bb"
+  ]
+}

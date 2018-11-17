@@ -1,0 +1,49 @@
+{
+  "create": {
+    "actors": [
+      "TestNode1",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "read": {
+    "actors": [
+      "TestNode1",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "TestNode1",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "TestNode1",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "TestNode1",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

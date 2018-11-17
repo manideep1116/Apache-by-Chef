@@ -1,0 +1,7 @@
+{
+  "name": "dev",
+  "description": "Dev Environment!",
+  "cookbook_versions": {
+    "apache": "= 0.2.0"
+  }
+}

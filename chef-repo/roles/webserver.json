@@ -1,0 +1,17 @@
+{
+  "name": "webserver",
+  "description": "Web Server",
+  "default_attributes": {
+    "apache": {
+      "sites": {
+        "admin": {
+          "port": 8000
+        }
+      }
+    }
+  },
+  "run_list": [
+    "role[base]",
+    "recipe[apache]"
+  ]
+}
