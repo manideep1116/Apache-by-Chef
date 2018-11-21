@@ -1,4 +1,4 @@
-# Chef_project
+# Apache by Chef
 
 Configured Apache Web Server on a node server to display three different websites on three different ports using configuration management tool(Chef).
 
