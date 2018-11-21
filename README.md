@@ -171,6 +171,9 @@ $ Knife cookbook upload apache
 $ chef-client
 
 ```
+## Output:
+175 ![ec2-instances](/img/ec2-instances.png)
+
 ## License
 This project is under MIT license.
 
