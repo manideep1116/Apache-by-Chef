@@ -173,6 +173,10 @@ $ chef-client
 ```
 ## Output:
 175 ![ec2-instances](/img/ec2-instances.png)
+<p align="center">
+  <img src="img/ec2-instances.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 
 ## License
 This project is under MIT license.
