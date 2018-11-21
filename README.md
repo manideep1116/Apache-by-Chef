@@ -173,9 +173,9 @@ $ chef-client
 ```
 ## Output:
 
-<p align="center">
-  <img src="img/ec2-instances.png" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+<p align="left">
+  <img src="img/ec2-instances.png" width="350" title="Chef-Workstation and Chef-client running on ec2-instances">
+  <img src="your_relative_path_here_number_2_large_name" width="250" >
 </p>
 
 ## License
