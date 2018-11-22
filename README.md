@@ -173,29 +173,31 @@ $ chef-client
 ```
 ## Output:
 
- <div class="row">
+<div class="row">
   <div class="column">
-   <img src="img/output1.png" width="500" title="Output of custom web page running on port 80" style="width:100%">
+   <img src="img/ec2-instances.png"  title="Chef-Workstation and Chef-client running on ec2-instances" style="width:100%">
   </div>
   <div class="column">
-    <img src="img/output2.png" width="500" title="Output of custom web page running on port 81" style="width:100%">
+    <img src="img/cookbook.png"  title="Cookbooks on hosted version of chef-server" style="width:100%">
   </div>
   <div class="column">
-     <img src="img/output3.png" width="500" title="Output of custom web page running on port 8000" style="width:100%">
+     <img src="img/TestNode1.png"  title="Node registered on chef-server" style="width:100%">
   </div>
 </div> 
 
  <div class="row">
   <div class="column">
-   <img src="img/ec2-instances.png" width="500" title="Chef-Workstation and Chef-client running on ec2-instances" style="width:100%">
+   <img src="img/output1.png"  title="Output of custom web page running on port 80" style="width:100%">
   </div>
   <div class="column">
-    <img src="img/cookbook.png" width="500" title="Cookbooks on hosted version of chef-server" style="width:100%">
+    <img src="img/output2.png"  title="Output of custom web page running on port 81" style="width:100%">
   </div>
   <div class="column">
-     <img src="img/TestNode1.png" width="500" title="Node registered on chef-server" style="width:100%">
+     <img src="img/output3.png"  title="Output of custom web page running on port 8000" style="width:100%">
   </div>
 </div> 
+
+ 
 .column {
   float: left;
   width: 33.33%;
