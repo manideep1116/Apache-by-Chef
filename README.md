@@ -174,7 +174,7 @@ $ chef-client
 ## Output:
 
 <p align="left">
-  <img src="img/ec2-instances.png" width="250" title="Chef-Workstation and Chef-client running on ec2-instances">
+  <img src="img/ec2-instances.png" width="500" title="Chef-Workstation and Chef-client running on ec2-instances">
   </p>
 <p align="right"> 
  <img src="img/cookbook.png" width="250" title="Cookbooks on hosted version of chef-server" >
