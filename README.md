@@ -175,18 +175,24 @@ $ chef-client
 
 <p align="left">
   <img src="img/ec2-instances.png" width="500" title="Chef-Workstation and Chef-client running on ec2-instances">
- <p align="right"> 
- <img src="img/cookbook.png" width="250" title="Cookbooks on hosted version of chef-server" >
- </p>
+  </p>
+
+<p align="left"> 
+ <img src="img/cookbook.png" width="500" title="Cookbooks on hosted version of chef-server" >
  </p>
 
  <p align="left">
- <img src="img/TestNode1.png" width="250" title="Node registered on chef-server" >
+ <img src="img/TestNode1.png" width="5000" title="Node registered on chef-server" >
   </p>
+   <p align="left">
   <img src="img/output1.png" width="250" title="Output of custom web page running on port 80" >
-  <img src="img/output2.png" width="250" title="Output of custom web page running on port 81" >
-  <img src="img/output3.png" width="250" title="Output of custom web page running on port 8000" >
-
+  </p>
+   <p align="left">
+<img src="img/output2.png" width="250" title="Output of custom web page running on port 81" >
+</p>
+ <p align="left">
+<img src="img/output3.png" width="250" title="Output of custom web page running on port 8000" >
+</p>
 
 
 ## License
